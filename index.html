@@ -1,0 +1,70 @@
+<!doctype html>
+ 
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <title>PriUni</title>
+    <meta name="description" content="PriUni" />
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+      *{
+        font-family: 'Noto Sans JP',Sans-Serif
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PriUni</h1>
+    <p>付加文字を大量にくっつけ、重い文字(俗に言う'Unicode')を生成します</p>
+    <form id="main-inputs">
+      <div>
+        <span>付加文字数</span>
+        <input type="number" name="length" id="length" value="100" placeholder="付加文字数" required>
+        <span>文字</span>
+      </div>
+      <div>
+        <span>基本文字列</span>
+        <input type="text" name="text" value="" id="text" placeholder="基本文字列(省略OK)">
+      </div>
+      <input type="submit" name="" id="" value="Run">
+    </form>
+    <div class="result">
+      <div>
+        結果: <textarea id="text-result" placeholder="Result" readonly></textarea>
+        <button id="copy">Copy!!</button>
+      </div>
+      <div>
+        <table id="" border="1" style="font-size:1em;border-collapse:collapse">
+          <tbody>
+            <tr>
+              <td>計文字数</td>
+              <td id="sum-length">NaN</td>
+            </tr>
+            <tr>
+              <td>UTF-8バイト数</td>
+              <td><span id="utf8-byte">NaN</span>&nbsp;B</td>
+            </tr>
+            <tr>
+              <td>UTF-16バイト数</td>
+              <td><span id="utf16-byte">NaN</span>&nbsp;B</td>
+            </tr>
+            <tr>
+              <td>UTF-32バイト数</td>
+              <td><span id="utf32-byte">NaN</span>&nbsp;B</td>
+            </tr>
+            <tr>
+              <td>JISバイト数</td>
+              <td><span id="jis-byte">NaN</span>&nbsp;B</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
+
